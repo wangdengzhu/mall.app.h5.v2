@@ -1,0 +1,28 @@
+.empty-icon{
+	display: block;
+	color:#999;
+	font-size: 0.28rem;
+	text-align: center;
+}
+
+.empty-icon:before{
+	content:'';
+	display: block;
+	background-position: 0 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin:0 auto;
+	margin-bottom: 0.25rem;
+}
+
+.empty-icon.empty-icon-goods:before{
+	width:1.8rem;
+	height: 1.64rem;
+	background-image: url(../images/goods-empty.png);
+}
+
+.empty-icon.empty-icon-addr:before{
+	width:1.68rem;
+	height: 1.53rem;
+	background-image: url(../images/addr-empty.png);
+}

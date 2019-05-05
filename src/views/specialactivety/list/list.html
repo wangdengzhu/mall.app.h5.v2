@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zn-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>全部商品</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <script>
+    	(function() {
+    		//API域名
+    		window.API_BASE_URL = 'https://devapi.manjd.com/api/';
+
+    		//默认图片域名
+    		window.IMAGE_DOMAIN = 'https://devimg.manjd.net/';
+
+            //静态资源路径
+            window.SKIN_DOMAIN = 'https://devskin.manjd.net/';
+
+    		//懒加载默认图片
+    		window.IMAGE_DEFAULT_OBJ = {
+    			I_LOADING: '190-190/2017701.png',
+    			I_200: '200-200/2017101.png',
+    			I_300: '300-300/2017201.png',
+    			I_750_300: '750-300/2017301.png',
+    			I_750_330: '750-330/2017401.png',
+    			I_750: '750-750/2017501.png',
+    			I_800: '800-800/2017601.png'
+    		};
+
+    		Object.keys(IMAGE_DEFAULT_OBJ).forEach(function(t) {
+    			IMAGE_DEFAULT_OBJ[t] = IMAGE_DOMAIN + 'default/' + IMAGE_DEFAULT_OBJ[t];
+    		});
+    	}())
+    </script>
+</head>
+<body returl="goback">
+	<div id="app"></div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>满金店</title>
+    <link rel="shortcut icon" href="/static/logo.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <script>
+    	var _mjda = _mjda || [];
+      
+      var API_BASE_URL = 'https://devapi.manjd.com/api/';
+      var IMAGE_BASE_URL = 'https://devimg.manjd.net/';
+      var SKIN_BASE_URL = 'https://devskin.manjd.net/';
+      var COOKIE_BASE_URL = 'domain=devm.manjd.com;';
+      
+      var ua = window.navigator.userAgent.toLowerCase();
+      var isWxBrowser = /(micromessenger|webbrowser)/g.test(ua);
+      if(isWxBrowser){
+        appendWxJS();
+      }
+      function appendWxJS(){
+        var head = document.head || document.getElementsByTagName('head')[0];
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = SKIN_BASE_URL + 'sdk/jweixin-120.js';
+        head.appendChild(script);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
